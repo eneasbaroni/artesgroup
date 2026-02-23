@@ -61,3 +61,29 @@ html, body  {
   background: linear-gradient(120deg,rgba(30, 30, 30, 0.8) 0%, rgba(30, 30, 30,0.10) 100%);
   backdrop-filter: blur(2px);
 }
+
+/* Para Firefox */
+.scrollbar-custom {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-ag-magent) transparent;
+}
+
+/* Para Chrome/Safari */
+.scrollbar-custom::-webkit-scrollbar {
+  height: 16px; /* alto total (thumb + espacio visual) */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 30%,
+    #e5e7eb 30%,
+    #e5e7eb 70%,
+    rgba(0,0,0,0) 70%
+  );
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: var(--color-ag-magent);
+  border-radius: 4px;
+}
