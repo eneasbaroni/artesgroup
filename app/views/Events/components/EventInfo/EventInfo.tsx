@@ -1,3 +1,4 @@
+import TicketIcon from "@/app/icons/TicketIcon";
 import { EventInfoProps } from "./types";
 
 const EventInfo = ({
@@ -40,7 +41,12 @@ const EventInfo = ({
         <h3 className="font-anton text-xl">{name}</h3>
         <p className="hidden h-0 group-hover:block  mt-8 rounded-lg transition-all duration-300 overflow-hidden group-hover:overflow-visible">
           {description}
+          <br />
+          <span className="flex flex-row items-center font-anton">
+            Comprar <TicketIcon />
+          </span>
         </p>
+
         <div className="-z-1 absolute top-0 left-0 w-full min-w-full h-52 min-h-52 translate-y-52 group-hover:translate-y-0 transition-all duration-500 bg-ag-magent"></div>
       </div>
     </div>

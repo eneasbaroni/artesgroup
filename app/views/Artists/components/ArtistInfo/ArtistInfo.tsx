@@ -1,6 +1,8 @@
 import SpotifyIcon from "@/app/icons/SpotifyIcon";
 import { ArtistInfoProps } from "./types";
 import InstagramIcon from "@/app/icons/InstagramIcon";
+import Link from "next/link";
+import InfoIcon from "@/app/icons/InfoIcon";
 
 const ArtistInfo = ({
   name,
@@ -23,6 +25,9 @@ const ArtistInfo = ({
         <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
           <InstagramIcon />
         </a>
+        <Link href="" target="_blank" rel="noopener noreferrer">
+          <InfoIcon />
+        </Link>
       </div>
     </div>
   );
