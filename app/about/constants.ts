@@ -31,3 +31,6 @@ export const CULTURAL_PRODUCTIONS = [
     "Antonio Gades",
     "Fiestas FM100 y Radio Mitre",
 ] as const;
+
+export const ABOUT_TEXT =
+    " Artes Group ha demostrado fehacientemente a lo largo de estos años que es una empresa con credibilidad absoluta, impecable en sus organizaciones y producciones y con una infraestructura especializada para cada evento. Artes Group es miembro de AADET, Asociación Argentina de Empresarios Teatrales.";

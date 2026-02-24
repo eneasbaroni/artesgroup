@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import {
+    ABOUT_TEXT,
     CULTURAL_PRODUCTIONS,
     INTERNATIONAL_PRODUCTIONS,
     NATIONAL_PRODUCTIONS,
@@ -23,6 +24,8 @@ const itemAnimation = {
     animation: { opacity: 1, y: 0 },
     transition: { duration: 0.5 },
 };
+
+const words = ABOUT_TEXT.split(" ");
 
 const About = () => {
     return (
@@ -127,7 +130,7 @@ const About = () => {
                 </motion.ul>
             </div>
             <div className="mt-40 py-4  w-full flex flex-col justify-center relative">
-                <div className="absolute h-full w-200 top-0  right-1/2 translate-x-1/2 flex justify-end items-end">
+                {/*  <div className="absolute h-full w-200 top-0  right-1/2 translate-x-1/2 flex justify-end items-end">
                     <motion.div
                         className=" h-full bg-ag-magent origin-right"
                         initial={{ width: 800 }}
@@ -137,15 +140,28 @@ const About = () => {
                             once: true,
                         }}
                     ></motion.div>
+                </div> */}
+                <div className="w-200 text-center font-anton text-2xl leading-10 m-auto">
+                    {words.map((word, index) => (
+                        <motion.span
+                            key={index}
+                            className="inline-block"
+                            initial={{
+                                filter: "blur(10px)",
+                                opacity: 0,
+                                y: 20,
+                            }}
+                            whileInView={{
+                                filter: "blur(0px)",
+                                opacity: 1,
+                                y: 0,
+                            }}
+                            transition={{ duration: 0.3, delay: index * 0.1 }}
+                        >
+                            {word}&nbsp;
+                        </motion.span>
+                    ))}
                 </div>
-                <p className="w-200 text-center font-anton text-2xl leading-10 m-auto">
-                    Artes Group ha demostrado fehacientemente a lo largo de
-                    estos años que es una empresa con credibilidad absoluta,
-                    impecable en sus organizaciones y producciones y con una
-                    infraestructura especializada para cada evento. Artes Group
-                    es miembro de AADET, Asociación Argentina de Empresarios
-                    Teatrales.
-                </p>
             </div>
             <Events />
         </div>
