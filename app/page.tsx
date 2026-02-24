@@ -3,18 +3,20 @@ import Brands from "./views/Brands/Brands";
 import Events from "./views/Events/Events";
 import Hero from "./views/Hero/Hero";
 import Hook from "./views/Hook/Hook";
-import Services from "./views/Services/Services";
+import ServicesB from "./views/Services copy/Services";
+//import Services from "./views/Services/Services";
 
 const Home = () => {
-  return (
-    <div className="w-full">
-      <Hero />
-      <Brands />
-      <Hook />
-      <Services />
-      <Artists />
-      <Events />
-    </div>
-  );
+    return (
+        <div className="w-full">
+            <Hero />
+            <Brands />
+            <Hook />
+            {/*  <Services /> */}
+            <ServicesB />
+            <Artists />
+            <Events />
+        </div>
+    );
 };
 export default Home;
