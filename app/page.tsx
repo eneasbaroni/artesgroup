@@ -4,7 +4,7 @@ import Events from "./views/Events/Events";
 import Hero from "./views/Hero/Hero";
 import Hook from "./views/Hook/Hook";
 import ServicesB from "./views/Services copy/Services";
-//import Services from "./views/Services/Services";
+// import Services from "./views/Services/Services";
 
 const Home = () => {
     return (
@@ -12,7 +12,6 @@ const Home = () => {
             <Hero />
             <Brands />
             <Hook />
-            {/*  <Services /> */}
             <ServicesB />
             <Artists />
             <Events />

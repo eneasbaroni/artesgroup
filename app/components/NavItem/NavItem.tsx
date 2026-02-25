@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { NavItemProps } from "./types";
 
-const NavItem = ({ label, href }: NavItemProps) => {
+const NavItem = ({ label, href, className }: NavItemProps) => {
     // Si es un anchor (comienza con #), usa <a> normal
     if (href.startsWith("/#")) {
         return (
             <a
                 href={href}
-                className="hover:text-ag-magent transition-colors duration-300"
+                className={`${className} hover:text-ag-magent transition-colors duration-300`}
             >
                 {label}
             </a>
@@ -18,7 +18,7 @@ const NavItem = ({ label, href }: NavItemProps) => {
     return (
         <Link
             href={href}
-            className="hover:text-ag-magent transition-colors duration-300"
+            className={`${className} hover:text-ag-magent transition-colors duration-300`}
         >
             {label}
         </Link>
