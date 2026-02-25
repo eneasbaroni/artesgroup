@@ -1,5 +1,5 @@
 import NavItem from "@/app/components/NavItem/NavItem";
-import { NAV_ITEMS } from "../../contatns";
+import { NAV_ITEMS_MOBILE } from "../../constants";
 import { motion } from "motion/react";
 
 type MobileMenuProps = {
@@ -19,7 +19,7 @@ const MobileMenu = ({ onClose }: MobileMenuProps) => {
       <button onClick={onClose} className="text-3xl text-ag-magent">
         X
       </button>
-      {NAV_ITEMS.map((item) => (
+      {NAV_ITEMS_MOBILE.map((item) => (
         <NavItem
           key={item.label}
           label={item.label}

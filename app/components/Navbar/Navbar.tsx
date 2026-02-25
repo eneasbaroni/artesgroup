@@ -1,7 +1,7 @@
 "use client";
 
 import NavItem from "../NavItem/NavItem";
-import { NAV_ITEMS } from "./contatns";
+import { NAV_ITEMS } from "./constants";
 import useHideOnScroll from "../../hooks/useHideOnScroll/useHideOnScroll";
 import MobileMenu from "./components/MobileMenu/MobileMenu";
 import { useState } from "react";
