@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="w-full h-auto p-15 mobile:p-4 pb-4 mt-40">
-      <div className="w-full h-72 bg-ag-magent rounded-3xl mobile:rounded-xl p-10 flex justify-end mobile:justify-center">
+      <div className="w-full h-72 mobile:h-auto bg-ag-magent rounded-3xl mobile:rounded-xl p-10 flex justify-end mobile:justify-center">
         <img
           src="/images/black-logo.png"
           alt="logo"
