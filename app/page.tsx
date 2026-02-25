@@ -7,15 +7,15 @@ import ServicesB from "./views/Services copy/Services";
 // import Services from "./views/Services/Services";
 
 const Home = () => {
-    return (
-        <div className="w-full">
-            <Hero />
-            <Brands />
-            <Hook />
-            <ServicesB />
-            <Artists />
-            <Events />
-        </div>
-    );
+  return (
+    <div className="w-full">
+      <Hero />
+      <Brands />
+      <Hook />
+      <ServicesB />
+      <Artists />
+      <Events />
+    </div>
+  );
 };
 export default Home;
