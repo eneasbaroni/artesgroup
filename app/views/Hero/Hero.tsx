@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="w-full h-screen relative flex items-center justify-center"
+      className="w-full h-[100lvh] relative flex items-center justify-center"
     >
       <img
         src="/images/hero-img.png"
