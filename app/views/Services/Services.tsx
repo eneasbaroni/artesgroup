@@ -45,7 +45,7 @@ const Services = () => {
         className="w-full"
         style={{ height: `${slides.length * 100}vh` }}
       >
-        <div className="sticky top-0 h-screen w-full overflow-hidden">
+        <div className="sticky top-0 h-[100dvh] w-full overflow-hidden">
           <h2 className="absolute top-20 left-15 font-anton text-[40px] z-50 pointer-events-none">
             NUESTROS SERVICIOS
           </h2>
