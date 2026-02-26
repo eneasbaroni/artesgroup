@@ -13,7 +13,7 @@ const Artists = () => {
           <ArtistInfo key={artist.name} {...artist} />
         ))}
       </div>
-      <div className="w-auto h-auto inline-block md:hidden absolute top-100 left-[calc(100vw-40px)]">
+      <div className="w-auto h-auto inline-block md:hidden absolute top-1/2 transform translate-y-25 left-[calc(100vw-40px)]">
         <Swipe />
       </div>
     </div>
