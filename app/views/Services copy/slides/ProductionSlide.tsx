@@ -7,13 +7,13 @@ const ProductionSlide = ({
 }: {
   scrollYProgress: MotionValue<number>;
 }) => {
-  const scale = useTransform(scrollYProgress, [0.25, 0.5], [1, 0.8]);
+  const scale = useTransform(scrollYProgress, [0.2, 0.4], [1, 0.8]);
   const borderRadius = useTransform(
     scrollYProgress,
-    [0.25, 0.5],
+    [0.2, 0.4],
     ["0px", "50px"],
   );
-  const rotate = useTransform(scrollYProgress, [0.25, 0.5], ["0deg", "-5deg"]);
+  const rotate = useTransform(scrollYProgress, [0.2, 0.4], ["0deg", "-5deg"]);
   return (
     <motion.div
       id="production"

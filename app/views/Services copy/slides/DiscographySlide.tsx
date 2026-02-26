@@ -7,17 +7,18 @@ const DiscographySlide = ({
 }: {
   scrollYProgress: MotionValue<number>;
 }) => {
-  const scale = useTransform(scrollYProgress, [0.75, 1], [1, 0.9]);
+  const scale = useTransform(scrollYProgress, [0.6, 0.8], [1, 0.9]);
   const borderRadius = useTransform(
     scrollYProgress,
-    [0.75, 1],
+    [0.6, 0.8],
     ["0px", "50px"],
   );
+  const rotate = useTransform(scrollYProgress, [0.6, 0.8], ["0deg", "-2deg"]);
   return (
     <motion.div
       id="discography"
       className="w-full h-screen px-10 sticky top-0 flex items-center justify-center flex-col bg-[url('/images/Discography.png')] bg-cover bg-center"
-      style={{ scale, borderRadius }}
+      style={{ scale, borderRadius, rotate }}
     >
       <div className="max-w-170 text-center darker-glass p-10 rounded-4xl border border-white/10">
         <h3 className="font-anton text-[40px] mobile:text-3xl">DISCOGRÁFICA</h3>

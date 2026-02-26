@@ -7,13 +7,9 @@ const EditorialSlide = ({
 }: {
   scrollYProgress: MotionValue<number>;
 }) => {
-  const scale = useTransform(scrollYProgress, [0, 0.25], [1, 0.8]);
-  const borderRadius = useTransform(
-    scrollYProgress,
-    [0, 0.25],
-    ["0px", "50px"],
-  );
-  const rotate = useTransform(scrollYProgress, [0, 0.33], ["0deg", "5deg"]);
+  const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.8]);
+  const borderRadius = useTransform(scrollYProgress, [0, 0.2], ["0px", "50px"]);
+  const rotate = useTransform(scrollYProgress, [0, 0.2], ["0deg", "5deg"]);
   return (
     <motion.div
       id="editorial"

@@ -7,17 +7,18 @@ const ManagementSlide = ({
 }: {
   scrollYProgress: MotionValue<number>;
 }) => {
-  const scale = useTransform(scrollYProgress, [0.5, 0.75], [1, 0.8]);
+  const scale = useTransform(scrollYProgress, [0.4, 0.6], [1, 0.8]);
   const borderRadius = useTransform(
     scrollYProgress,
-    [0.5, 0.75],
+    [0.4, 0.6],
     ["0px", "50px"],
   );
+  const rotate = useTransform(scrollYProgress, [0.4, 0.6], ["0deg", "5deg"]);
   return (
     <motion.div
       id="mgmt"
       className="w-full h-screen px-10 sticky top-0 flex items-center justify-center flex-col bg-[url('/images/Mgmt.png')] bg-cover bg-center"
-      style={{ scale, borderRadius }}
+      style={{ scale, borderRadius, rotate }}
     >
       <div className="max-w-170 text-center darker-glass p-10 rounded-4xl border border-white/10">
         <h3 className="font-anton text-[40px] mobile:text-3xl">MANAGEMENT</h3>
