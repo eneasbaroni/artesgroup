@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="w-full h-auto p-15 mobile:p-4 pb-4 mt-40">
       <div className="w-full h-72 mobile:h-auto bg-ag-magent rounded-3xl mobile:rounded-xl p-10 flex justify-end mobile:justify-center">
         <img
-          src="/images/black-logo.png"
+          src="/images/logo-black.svg"
           alt="logo"
           className="h-32 tablet:h-24 mobile:h-18"
         />

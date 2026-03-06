@@ -6,6 +6,7 @@ import useHideOnScroll from "../../hooks/useHideOnScroll/useHideOnScroll";
 import MobileMenu from "./components/MobileMenu/MobileMenu";
 import { useState } from "react";
 import { AnimatePresence } from "motion/react";
+import Link from "next/link";
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -26,9 +27,9 @@ const Navbar = () => {
             : "translate-y-0 opacity-100"
         }`}
       >
-        <a href="#home">
-          <img src="/images/logo.png" alt="Logo" />
-        </a>
+        <Link href="/#home">
+          <img src="/images/logo.svg" alt="Logo" className="w-20" />
+        </Link>
 
         {NAV_ITEMS.map((item) => (
           <NavItem key={item.label} label={item.label} href={item.href} />
@@ -45,12 +46,12 @@ const Navbar = () => {
                 }
                 `}
       >
-        <a
-          href="#home"
+        <Link
+          href="/#home"
           className="p-4 pt-5 rounded-full w-auto h-auto dark-glass border border-white/10 flex items-center justify-center"
         >
-          <img src="/images/logo.png" alt="Logo" />
-        </a>
+          <img src="/images/logo.svg" alt="Logo" className="w-15" />
+        </Link>
         {/* Menú hamburguesa */}
         <button
           className="ml-4 z-90 p-4 dark-glass rounded-full border border-white/10"

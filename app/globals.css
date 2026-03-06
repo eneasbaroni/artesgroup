@@ -46,7 +46,7 @@ html, body  {
 
 .white-glass {
   background: #ffffff;
-  background: linear-gradient(120deg,rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(120deg,rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
   backdrop-filter: blur(1px);
 }
 
@@ -86,4 +86,9 @@ html, body  {
 .scrollbar-custom::-webkit-scrollbar-thumb {
   background: var(--color-ag-magent);
   border-radius: 4px;
+}
+
+
+.prueba-color {
+  background: rgba(236, 113, 72, 0.2)
 }
