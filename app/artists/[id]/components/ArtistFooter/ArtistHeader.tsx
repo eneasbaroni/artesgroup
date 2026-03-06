@@ -4,6 +4,7 @@ import AuthGuard, {
   isAuthenticated,
 } from "@/app/components/AuthGuard/AuthGuard";
 import DeleteArtistButton from "../DeleteArtistButton/DeleteArtistButton";
+import EditIcon from "@/app/icons/EditIcon";
 
 const ArtistFooter = async ({ id }: { id: Artist["_id"] }) => {
   const authenticated = await isAuthenticated();
@@ -24,7 +25,7 @@ const ArtistFooter = async ({ id }: { id: Artist["_id"] }) => {
             href={`/admin/artists/edit/${id}`}
             className="px-4 py-2 mobile:text-sm border border-ag-magent bg-ag-magent/10 rounded-full hover:bg-ag-magent/20 transition "
           >
-            Editar artista
+            <EditIcon />
           </Link>
         </div>
       </AuthGuard>
