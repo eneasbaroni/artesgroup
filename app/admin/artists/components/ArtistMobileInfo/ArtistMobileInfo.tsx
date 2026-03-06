@@ -40,7 +40,9 @@ const ArtistMobileInfo = ({ artist }: { artist: Artist }) => {
             exit={{ height: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <p className="text-sm">{artist.bio}</p>
+            <p className="text-sm whitespace-pre-wrap">
+              {artist.bio.replace(/\\n/g, "\n")}
+            </p>
             <div className="flex flex-row gap-2 mt-2 justify-around items-center">
               {artist.socialMedia.instagram && (
                 <a href={artist.socialMedia.instagram}>
