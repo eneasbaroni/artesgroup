@@ -19,7 +19,7 @@ const VideoSection = ({ register, errors, control }: VideoSectionProps) => {
   return (
     <div className="mt-10 flex flex-col gap-4">
       <div className="flex flex-row mobile:flex-col gap-2 items-center">
-        <div className="w-15 h-15 bg-white/10 rounded-full border border-white/10 flex items-center justify-center">
+        <div className="w-15 h-15 p-4 bg-white/10 rounded-full border border-white/10 flex items-center justify-center">
           <YoutubeIcon />
         </div>
         <div className="flex flex-col items-start justify-center">
