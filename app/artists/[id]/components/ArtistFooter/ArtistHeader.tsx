@@ -21,7 +21,7 @@ const ArtistFooter = async ({ id }: { id: Artist["_id"] }) => {
         <div className="flex gap-2">
           <DeleteArtistButton artistId={id} />
           <Link
-            href={`/admin/artists/${id}/edit`}
+            href={`/admin/artists/edit/${id}`}
             className="px-4 py-2 mobile:text-sm border border-ag-magent bg-ag-magent/10 rounded-full hover:bg-ag-magent/20 transition "
           >
             Editar artista
