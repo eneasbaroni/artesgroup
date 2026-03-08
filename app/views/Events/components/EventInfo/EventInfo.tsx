@@ -25,7 +25,7 @@ const EventInfo = ({ event }: { event: Event }) => {
         <h3 className="flex-[0.5] font-anton text-xl">
           {formatShortDate(event.date)}
         </h3>
-        <div className="flex-1 flex flex-row w-50 min-w-50 justify-center items-center">
+        <div className="flex-1 flex flex-row w-50 min-w-50 justify-start items-center">
           <h4 className="ml-4">{getDayOfWeek(event.date)}</h4>
           <div className="w-10 h-px m-2 bg-white"></div>
           <h4>{formatTime(event.date)}</h4>
