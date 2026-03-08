@@ -3,9 +3,17 @@ import { motion } from "framer-motion";
 
 type SuccessModalProps = {
   onClose: () => void;
+  title?: string;
+  description?: string;
+  addNewButtonText?: string;
 };
 
-const SuccessModal = ({ onClose }: SuccessModalProps) => {
+const SuccessModal = ({
+  onClose,
+  title = "Artista guardado exitosamente!",
+  description = "El artista ha sido guardado correctamente en la base de datos.",
+  addNewButtonText = "Agregar nuevo artista",
+}: SuccessModalProps) => {
   return (
     <motion.div
       className="fixed w-screen h-screen top-0 left-0 flex items-center justify-center bg-black/50 backdrop-blur-lg z-50"
@@ -46,8 +54,8 @@ const SuccessModal = ({ onClose }: SuccessModalProps) => {
             },
           }}
         >
-          <h3 className="font-anton text-xl">Artista guardado exitosamente!</h3>
-          <p>El artista ha sido guardado correctamente en la base de datos.</p>
+          <h3 className="font-anton text-xl">{title}</h3>
+          <p>{description}</p>
 
           <div className="flex flex-row mobile:flex-col gap-4 justify-center items-center">
             <Link
@@ -60,7 +68,7 @@ const SuccessModal = ({ onClose }: SuccessModalProps) => {
               onClick={onClose}
               className="border border-white/10 px-4 py-2 rounded-full hover:bg-ag-magent transition-colors duration-300 cursor-pointer"
             >
-              Agregar nuevo artista
+              {addNewButtonText}
             </button>
           </div>
         </motion.div>

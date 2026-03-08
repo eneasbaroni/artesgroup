@@ -80,10 +80,6 @@ const EventForm = ({ initialData, eventId }: EventFormProps) => {
       }
 
       setShowSuccess(true);
-      console.log(
-        `Evento ${isEditMode ? "actualizado" : "creado"}:`,
-        result.event,
-      );
     } catch (error) {
       console.error("Error:", error);
       const message = `Error al ${isEditMode ? "actualizar" : "guardar"} el evento, por favor intenta nuevamente.`;
@@ -208,7 +204,22 @@ const EventForm = ({ initialData, eventId }: EventFormProps) => {
       </form>
 
       {isLoading && <Loader />}
-      {showSuccess && <SuccessModal onClose={handleCloseSuccessModal} />}
+      {showSuccess && (
+        <SuccessModal
+          onClose={handleCloseSuccessModal}
+          title={
+            isEditMode
+              ? "Evento actualizado exitosamente!"
+              : "Evento guardado exitosamente!"
+          }
+          description={
+            isEditMode
+              ? "El evento ha sido actualizado correctamente en la base de datos."
+              : "El evento ha sido guardado correctamente en la base de datos."
+          }
+          addNewButtonText="Agregar nuevo evento"
+        />
+      )}
       {errorMessage && (
         <ErrorSnackbar
           message={errorMessage}

@@ -27,28 +27,40 @@ const EventsContainer = ({ EVENTS }: { EVENTS: Event[] }) => {
       <h2 className="ml-15 tablet:ml-10 font-anton text-[40px] mobile:text-3xl">
         PRÓXIMOS EVENTOS
       </h2>
-      <motion.div
-        className="w-full h-auto flex flex-col border-t mt-8"
-        variants={variants}
-        initial="initial"
-        whileInView="animation"
-        viewport={{
-          once: true,
-        }}
-      >
-        <div className="tablet:hidden">
-          {EVENTS.map((event) => (
-            <motion.div key={event.artist} variants={itemAnimation}>
-              <EventInfo key={event.artist} event={event} />
-            </motion.div>
-          ))}
+
+      {EVENTS.length === 0 ? (
+        <div className="w-full h-auto flex flex-col">
+          <h4 className="mt-4 mx-15 tablet:mx-10 font-anton">
+            No hay eventos próximos disponibles.
+            <br />
+            Síguenos en nuestras redes sociales para estar al tanto de las
+            novedades.
+          </h4>
         </div>
-        <div className="lg:hidden">
-          {EVENTS.map((event) => (
-            <EventInfoMobile key={event.artist + "-mobile"} event={event} />
-          ))}
-        </div>
-      </motion.div>
+      ) : (
+        <motion.div
+          className="w-full h-auto flex flex-col border-t border-t-white/20 mt-8"
+          variants={variants}
+          initial="initial"
+          whileInView="animation"
+          viewport={{
+            once: true,
+          }}
+        >
+          <div className="tablet:hidden">
+            {EVENTS.map((event) => (
+              <motion.div key={event.artist} variants={itemAnimation}>
+                <EventInfo key={event.artist} event={event} />
+              </motion.div>
+            ))}
+          </div>
+          <div className="lg:hidden">
+            {EVENTS.map((event) => (
+              <EventInfoMobile key={event.artist + "-mobile"} event={event} />
+            ))}
+          </div>
+        </motion.div>
+      )}
     </div>
   );
 };

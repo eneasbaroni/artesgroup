@@ -21,24 +21,30 @@ const EventItem = ({ event }: { event: Event }) => {
   };
 
   const containerVariants: Variants = {
-    initial: {},
-    hover: {},
-  };
-
-  const contentVariants: Variants = {
     initial: {
-      height: 0,
-      opacity: 0,
+      height: "30px",
     },
     hover: {
       height: "auto",
+      transition: { duration: 0.3 },
+    },
+  };
+
+  const imgVariants: Variants = {
+    initial: {
+      height: "0px",
+      opacity: 0,
+    },
+    hover: {
+      height: "100%",
       opacity: 1,
+      transition: { duration: 0.5 },
     },
   };
 
   return (
     <motion.div
-      className="w-full cursor-pointer border-b border-b-white/10 flex flex-col"
+      className="w-full cursor-pointer border-b border-b-white/10 flex flex-col overflow-hidden"
       onClick={toggleDisplay}
       variants={containerVariants}
       initial="initial"
@@ -66,16 +72,15 @@ const EventItem = ({ event }: { event: Event }) => {
           <ChebronDown />
         </div>
       </div>
-      <motion.div
-        className="mobile:hidden w-full flex mobile:flex-col gap-2 border-t border-t-white/10 overflow-hidden"
-        variants={contentVariants}
-        transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-      >
-        <img
-          src={event.imgUrl}
-          alt={event.artist}
-          className="h-40 w-full object-cover object-top flex-1"
-        />
+      <div className="mobile:hidden w-full flex mobile:flex-col gap-2 border-t border-t-white/10 h-400px">
+        <div className="flex-1 self-stretch">
+          <motion.img
+            src={event.imgUrl}
+            alt={event.artist}
+            className="w-full h-full object-cover object-top"
+            variants={imgVariants}
+          />
+        </div>
         <p className="text-sm text-white/50 flex-1 flex items-center mobile:text-center mobile:px-5">
           {event.description}
         </p>
@@ -119,7 +124,7 @@ const EventItem = ({ event }: { event: Event }) => {
           <DeleteEventButton eventId={event._id} />
         </div>
         <div className="flex-1 md:hidden"></div>
-      </motion.div>
+      </div>
 
       {isDisplayed && (
         <motion.div

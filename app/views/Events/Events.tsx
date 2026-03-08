@@ -8,7 +8,15 @@ const Events = async () => {
     return <></>;
   }
 
-  return <EventsContainer EVENTS={EVENTS} />;
+  /* Filtrar eventos con adEnable true */
+  const enabledEvents = EVENTS.filter((event) => event.adEnable);
+
+  /* Filtrar eventos que no han ocurrido aún */
+  const upcomingEvents = enabledEvents.filter(
+    (event) => new Date(event.date) > new Date(),
+  );
+
+  return <EventsContainer EVENTS={upcomingEvents} />;
 };
 
 export default Events;

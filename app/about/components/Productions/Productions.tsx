@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import {
-  ABOUT_TEXT,
   CULTURAL_PRODUCTIONS,
   INTERNATIONAL_PRODUCTIONS,
   NATIONAL_PRODUCTIONS,
@@ -23,8 +22,6 @@ const itemAnimation = {
   animation: { opacity: 1, y: 0 },
   transition: { duration: 0.5 },
 };
-
-const words = ABOUT_TEXT.split(" ");
 
 const Productions = () => {
   return (

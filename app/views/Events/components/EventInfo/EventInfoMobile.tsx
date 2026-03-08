@@ -24,6 +24,7 @@ const EventInfoMobile = ({ event }: { event: Event }) => {
         </div>
       </div>
       <h3 className="font-anton text-3xl mt-5">{event.artist}</h3>
+      <h4 className="font-light font-anton text-lg">{event.venue}</h4>
       <p className="mt-8 text-sm">
         {event.description}
         <br />
